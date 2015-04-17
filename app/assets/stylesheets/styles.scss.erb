@@ -1,0 +1,163 @@
+$nav-bar: #27ae60;
+
+@font-face {
+  font-family: "heading-font";
+  src: font-url("Bitter-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "heading-font";
+  src: font-url("Bitter-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "heading-font";
+  src: font-url("Bitter-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "body-font";
+  src: font-url("Raleway-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "body-font";
+  src: font-url("Raleway-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "body-font";
+  src: font-url("Raleway-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+ul.nav li {
+  font-family: heading-font;
+  font-size: .8em;
+  padding-left: 1.5em;
+  display: inline;
+}
+
+ul.nav {
+  height: 2em;
+  border: solid 2px #34495e;
+  background: #34495e;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 3.8em;
+}
+
+ul.nav li a {
+  color: white;
+}
+
+.top-bar .name h1 {
+  font-family: heading-font;
+  font-size: 3em;
+  padding-top: 0.07em;
+  padding-bottom: .3em;
+  color: white;
+}
+.top-bar, .fixed, .sticky {
+  background: $nav-bar;
+  overflow: visible;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button) {
+  background: #e67e22;
+  font-family: body-font;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 40em) {
+  .top-bar .name h1 {
+    text-align: center;
+    padding-left: 0;
+  }
+  .top-bar-section li.active:not(.has-form) a:not(.button) {
+    text-align: center;
+    border-top: solid 0.25em $nav-bar;
+    border-bottom: solid 0.25em $nav-bar;
+    border-left: solid 0.4em $nav-bar;
+    border-right: solid 0.4em $nav-bar;
+  }
+}
+
+.main {
+  font-family: body-font;
+  font-weight: bold;
+  font-size: 2em;
+  color: white;
+  text-shadow: .5px .5px black;
+  text-align: center;
+  height: 50%;
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(<%= asset_path 'kayaks.jpg' %>);
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button):hover {
+  background: #d35400;
+  color: #FFFFFF;
+}
+
+.top-bar.expanded .title-area {
+  background: $nav-bar;
+}
+
+.quote-container {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #34495e;
+}
+
+.benefits {
+  text-align: center;
+  font-family: heading-font;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.benefit-tiles h3 {
+  font-family: body-font;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+  border-bottom: solid 0.1em white;
+}
+
+.benefit-tiles {
+  border: solid 2px $nav-bar;
+  background-color: $nav-bar;
+  text-align: center;
+  height: 22em;
+}
+
+.small-block-grid-1 {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.tile-text {
+  font-family: body-font;
+  color: white;
+  font-size: 1.4em;
+  text-align: center;
+}
