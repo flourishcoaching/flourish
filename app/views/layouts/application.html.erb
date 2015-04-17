@@ -3,19 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title><%= content_for?(:title) ? yield(:title) : "Launch: Learning for Life" %></title>
-
     <%= stylesheet_link_tag    "application" %>
     <%= stylesheet_link_tag "styles" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-
   <body>
-
-    <%= yield %>
-
+    <ul class="nav">
+      <li class="nav"><a class="nav" href="">Blog</a></li>
+      <li class="nav"><a class="nav" href="">Contact</a></li>
+    </ul>
+    <div class="contain-to-grid sticky">
+      <nav class="top-bar nav-center" data-topbar role="navigation" data-options="sticky_on: large">
+        <ul class="title-area">
+          <li class="name">
+            <h1>FLOURISH</h1>
+          </li>
+        </ul>
+        <section class="top-bar-section-a">
+          <ul class="right">
+            <li class="active"><a class="button-mid" href="#">Schedule Free Consultation</a></li>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    <div class="row">
+      <%= yield %>
+    </div>
   </body>
 </html>
