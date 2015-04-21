@@ -94,9 +94,10 @@ ul.nav li a {
   .top-bar .name h1 {
     text-align: center;
     padding-left: 0;
-    line-height: 2.8125rem;
+    line-height: 3rem;
   }
   .top-bar-section li.active:not(.has-form) a:not(.button) {
+    background: #d35400;
     text-align: center;
     border-top: solid 0.25em $nav-bar;
     border-bottom: solid 0.25em $nav-bar;
@@ -107,23 +108,103 @@ ul.nav li a {
   .benefit-tiles {
     height: 13em;
   }
+  .howworks-tiles {
+    height: 13em;
+  }
+  .tile-text {
+    font-family: body-font;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: .2em;
+    padding-right: .2em;
+  }
+
+  .howworks-tile-text {
+    font-family: body-font;
+    color: #34495e;
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: .2em;
+    padding-right: .2em;
+  }
+
 }
 
 @media only screen and (min-width: 40.063em) {
   .benefit-tiles {
     height: 13em;
   }
-} /* min-width 641px, medium screens */
+  .howworks-tiles {
+    height: 13em;
+  }
+  .tile-text {
+    font-family: body-font;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: .2em;
+    padding-right: .2em;
+  }
+
+  .howworks-tile-text {
+    font-family: body-font;
+    color: #34495e;
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: .2em;
+    padding-right: .2em;
+  }
+}
 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
   .benefit-tiles {
-    height: 13em;
+    height: 15em;
   }
-} /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+  .howworks-tiles {
+    height: 15em;
+  }
+  .tile-text {
+    font-family: body-font;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: .2em;
+    padding-right: .2em;
+  }
+
+  .howworks-tile-text {
+    font-family: body-font;
+    color: #34495e;
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: .2em;
+    padding-right: .2em;
+  }
+}
 
 @media only screen and (min-width: 64.063em) {
   .benefit-tiles {
-    height: 17em;
+    height: 19em;
+  }
+  .howworks-tiles {
+    height: 19em;
+  }
+  .tile-text {
+    font-family: body-font;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: .2em;
+    padding-left: .2em;
+  }
+  .howworks-tile-text {
+    font-family: body-font;
+    color: #34495e;
+    font-size: 1.2em;
+    text-align: center;
+    padding-left: .2em;
+    padding-left: .2em;
   }
 }
 
@@ -181,22 +262,29 @@ ul.nav li a {
   border-bottom: solid 0.1em white;
 }
 
+.howworks-tiles h3 {
+  font-family: body-font;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #34495e;
+  border-bottom: solid 0.05em #34495e;
+}
+
 .benefit-tiles {
   border: solid 2px $nav-bar;
   background-color: $nav-bar;
   text-align: center;
 }
 
+.howworks-tiles {
+  border: solid 2px #34495e;
+  background-color: white;
+  text-align: center;
+}
+
 .small-block-grid-1 {
   margin-left: 1em;
   margin-right: 1em;
-}
-
-.tile-text {
-  font-family: body-font;
-  color: white;
-  font-size: 1.2em;
-  text-align: center;
 }
 
 .italics {
@@ -210,4 +298,57 @@ ul.nav li.right {
   color: #bdc3c7;
   font-size: 1.1em;
   padding-right: 2.5em;
+}
+
+// footer CSS
+
+.full-width {
+  max-width: 1400px;
+}
+
+
+.footer {
+  background-color: #bdc3c7;
+  padding: 2rem 4rem;
+  text-align: center;
+  color: #2c3e50;
+  i {
+    font-size: 100px;
+  }
+}
+
+.footer {
+  h4 {
+    color: #2c3e50;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    margin-bottom: 10px;
+  }
+  p {
+    font-weight: 300;
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (min-width: 40.063em) {
+.footer {
+  .columns:nth-child(n+2) {
+     border-left: 1px solid scale-color(#fff, $lightness: -30%);
+     min-height: 280px;
+  }
+ }
+}
+
+.footer-links {
+  list-style-type: none;
+  a {
+    color: #2c3e50;
+    font-weight: 300;
+    font-size: .8rem;
+  }
+  li {
+    margin-top: .5rem;
+  }
 }
