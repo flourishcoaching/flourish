@@ -37,6 +37,13 @@ $nav-bar: #27ae60;
 
 @font-face {
   font-family: "body-font";
+  src: font-url("Raleway-ExtraLight.ttf");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "body-font";
   src: font-url("Raleway-Italic.ttf");
   font-weight: normal;
   font-style: italic;
@@ -68,6 +75,7 @@ ul.nav li a {
   padding-top: 0.07em;
   padding-bottom: .3em;
   color: white;
+  line-height: 3.3rem;
 }
 .top-bar, .fixed, .sticky {
   background: $nav-bar;
@@ -75,16 +83,18 @@ ul.nav li a {
 }
 
 .top-bar-section li.active:not(.has-form) a:not(.button) {
-  background: #e67e22;
+  background: #f1c40f;
   font-family: body-font;
   font-weight: bold;
   font-size: 1em;
+  line-height: 3.6rem;
 }
 
 @media only screen and (max-width: 40em) {
   .top-bar .name h1 {
     text-align: center;
     padding-left: 0;
+    line-height: 2.8125rem;
   }
   .top-bar-section li.active:not(.has-form) a:not(.button) {
     text-align: center;
@@ -92,7 +102,35 @@ ul.nav li a {
     border-bottom: solid 0.25em $nav-bar;
     border-left: solid 0.4em $nav-bar;
     border-right: solid 0.4em $nav-bar;
+    line-height: 2.6rem;
   }
+  .benefit-tiles {
+    height: 13em;
+  }
+}
+
+@media only screen and (min-width: 40.063em) {
+  .benefit-tiles {
+    height: 13em;
+  }
+} /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .benefit-tiles {
+    height: 13em;
+  }
+} /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+@media only screen and (min-width: 64.063em) {
+  .benefit-tiles {
+    height: 19em;
+  }
+}
+
+.top-bar {
+  height: 3.6rem;
+  line-height: 2.8125rem;
+  position: relative;
 }
 
 .main {
@@ -137,7 +175,7 @@ ul.nav li a {
 
 .benefit-tiles h3 {
   font-family: body-font;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: bold;
   color: white;
   border-bottom: solid 0.1em white;
@@ -147,7 +185,6 @@ ul.nav li a {
   border: solid 2px $nav-bar;
   background-color: $nav-bar;
   text-align: center;
-  height: 22em;
 }
 
 .small-block-grid-1 {
@@ -158,6 +195,19 @@ ul.nav li a {
 .tile-text {
   font-family: body-font;
   color: white;
-  font-size: 1.4em;
+  font-size: 1.2em;
   text-align: center;
+}
+
+.italics {
+  font-family: body-font;
+  font-style: italic;
+}
+
+ul.nav li.right {
+  font-family: body-font;
+  font-weight: lighter;
+  color: #bdc3c7;
+  font-size: 1.1em;
+  padding-right: 2.5em;
 }
